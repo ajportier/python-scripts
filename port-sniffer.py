@@ -5,7 +5,7 @@ def testUDP(host,port):
     socket.setdefaulttimeout(2)
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
-        s.connect((host,int(port)))
+        s.bind((host,int(port)))
         s.shutdown(2)
         return True
     except:
